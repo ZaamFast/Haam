@@ -5517,24 +5517,19 @@ focus_tree = {
 			custom_effect_tooltip = NOR_modify_kingdom_of_norway_TT
 			add_to_variable = {
 				var = NOR_kingdom_of_norway_dmod_production_speed_coastal_bunker_factor
-				value = 0.35
+				value = 0.1
 				tooltip = production_speed_coastal_bunker_factor_tt 
 			}
 			add_to_variable = {
 				var = NOR_kingdom_of_norway_dmod_production_speed_naval_base_factor
-				value = 0.4
+				value = 0.1
 				tooltip = production_speed_naval_base_factor_tt 
 			}
 			add_to_variable = {
 				var = NOR_kingdom_of_norway_dmod_naval_mines_damage_factor
-				value = 0.2
+				value = 0.05
 				tooltip = naval_mines_damage_factor_tt
-			}
-			add_to_variable = {
-				var = NOR_kingdom_of_norway_dmod_spotting_chance
-				value = 0.35
-				tooltip = spotting_chance_tt
-			}			
+			}		
 		}
 	}
 
@@ -5599,7 +5594,7 @@ focus_tree = {
 			custom_effect_tooltip = NOR_modify_kingdom_of_norway_TT
 			add_to_variable = {
 				var = NOR_kingdom_of_norway_dmod_navy_max_range_factor
-				value = 0.15
+				value = 0.05
 				tooltip = navy_max_range_factor_tt  
 			}
 		}
@@ -5623,7 +5618,7 @@ focus_tree = {
 			custom_effect_tooltip = NOR_modify_kingdom_of_norway_TT
 			add_to_variable = {
 				var = NOR_kingdom_of_norway_dmod_production_speed_dockyard_factor
-				value = 0.2
+				value = 0.05
 				tooltip = production_speed_dockyard_factor_tt 
 			}
 			every_owned_state = {
