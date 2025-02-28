@@ -6,12 +6,7 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 
 
 
-10062;7108;impassable;-1;-1;-1;-1;-1;;Hong Kong
 
-11981;7135;impassable;-1;-1;-1;-1;-1;;Guang
-11981;4023;impassable;-1;-1;-1;-1;-1;;Guang
-11981;10105;impassable;-1;-1;-1;-1;-1;;Guang
-11981;7039;impassable;-1;-1;-1;-1;-1;;Guang
 
 4135;13228;impassable;-1;-1;-1;-1;-1;;Gibraltar
 4135;10094;impassable;-1;-1;-1;-1;-1;;Gibraltar
