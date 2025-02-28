@@ -1,0 +1,1 @@
+NDefines.NMilitary.UNIT_LEADER_USE_NONLINEAR_XP_GAIN = false
