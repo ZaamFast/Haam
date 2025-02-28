@@ -20,7 +20,7 @@
  nationalization_partial_desc: "Means of production nationalized as state-owned enterprises. In effect entire economy is run like one giant corporation, using income from the economy to re-invest it into it." 
  nationalization_capital:0 "Capitalism"
  nationalization_capital_desc: "Means of production are owned privately with a for profit operation. Decisions are made by owners of wealth, property or those with an ability to move capital."
-nationalization_FA_america_capital:0 "§CAmerican Capitalism§!"
+ nationalization_FA_america_capital:0 "§CAmerican Capitalism§!"
  nationalization_FA_america_capital_desc: "American Capitalism in economic policy reflects private ownership driving profit-driven decisions, fostering competitive markets and growth. Unlike state-controlled systems, it empowers private enterprise to innovate and drive industrial output, promoting individual freedom and market dynamics.."
  
  population:0 "Population Growth Control"
@@ -33,7 +33,7 @@ nationalization_FA_america_capital:0 "§CAmerican Capitalism§!"
  mass_media_propaganda:0 "Government Propaganda"
  mass_media_censorship:0 "Censorship"
  mass_media_free:0 "Free Press"
-mass_media_FA_productive_press:0 "§R State Owned Press§!"
+ mass_media_FA_productive_press:0 "§R State Owned Press§!"
 
  finances:0 "Financial Course"
  finances_science:0 "Scientists Support"
