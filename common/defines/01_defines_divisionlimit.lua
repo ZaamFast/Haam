@@ -1,0 +1,4 @@
+NDefines.NMilitary.CORPS_COMMANDER_DIVISIONS_CAP = 50			
+NDefines.NMilitary.CORPS_COMMANDER_ARMIES_CAP = -1				
+NDefines.NMilitary.FIELD_MARSHAL_DIVISIONS_CAP = 0			
+NDefines.NMilitary.FIELD_MARSHAL_ARMIES_CAP = 0				
