@@ -86,7 +86,7 @@ if = {
 	}
 }
 
-set_research_slots = 3
+set_research_slots = 4
 set_convoys = 0
 
 1939.1.1 = {

@@ -18,7 +18,7 @@ IF = {
 	}
 }
 
-set_research_slots = 2
+set_research_slots = 3
 # TODO JA, add the correct dlc-requirments
 IF = {
 	limit = {

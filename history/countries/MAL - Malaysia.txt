@@ -2,7 +2,7 @@
 
 oob = "MAL_1936"
 
-set_research_slots = 3
+set_research_slots = 4
 
 recruit_character = MAL_shenton_thomas
 recruit_character = MAL_onn_jaafar

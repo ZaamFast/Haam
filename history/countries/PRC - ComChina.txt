@@ -73,7 +73,7 @@ save_global_event_target_as = WTT_communist_china
 		complete_national_focus = PRC_provoke_japan
 		complete_national_focus = PRC_mobile_warfare
 
-		set_research_slots = 3
+		set_research_slots = 4
 
 		add_ideas = {
 			PRC_revolutionary_military_commission
