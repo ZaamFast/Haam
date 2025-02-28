@@ -397,7 +397,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = SOV_finish_the_five_year_plan
-		cost = 10
+		cost = 2
 
 		ai_will_do = {
 			factor = 1
@@ -4250,18 +4250,6 @@ focus_tree = {
 		relative_position_id = SOV_pc_of_mechanical_engineering
 		cost = 10
 
-		available = {
-			if = {
-				limit = {
-					has_dlc = "No Step Back"
-				}
-				has_tech = improved_medium_tank_chassis
-			}
-			else = {
-				has_tech = improved_medium_tank
-			}
-		}
-		
 		search_filters = {FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
