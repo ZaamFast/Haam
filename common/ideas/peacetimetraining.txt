@@ -1,0 +1,32 @@
+ideas = {
+    country = {
+        peace_training = {
+
+            allowed = { always = yes }
+
+            cancel = { has_war = yes }
+
+            removal_cost = -1
+
+            picture = ast_volunteer_defence_corps
+
+            modifier = {                
+				#experience_gain_army_unit_factor = 1
+                experience_gain_army = 0.4
+                training_time_army_factor = -0.4
+                #air_training_xp_gain_factor = 9
+                #experience_gain_navy_unit_factor = 10
+                #attrition = -1
+                air_accidents_factor = -9.99
+                naval_accidents_chance = -9.99
+                #mobilization_speed = 2
+                army_fuel_consumption_factor = -9.99
+                air_fuel_consumption_factor = -9.99
+                navy_fuel_consumption_factor = -9.99
+                repair_speed_factor = 9.99
+				experience_gain_air = 0.4
+				experience_gain_navy = 0.4
+            }
+        }
+    }
+}
