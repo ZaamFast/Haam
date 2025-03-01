@@ -69,3 +69,17 @@ defined_text = { # global
 		localization_key = AWARD_STATES_DELAYED_ok
 	}
 }
+
+defined_text = { # state
+	name = st_give_state_entry_loc
+
+	text = {
+		trigger = {
+			has_state_flag = marked_for_transfer
+		}
+		localization_key = "st_give_state_marked_entry"
+	}
+	text = {
+		localization_key = "st_give_state_entry"
+	}
+}
