@@ -74,7 +74,7 @@ focus_tree = {
 				ITA_cw_branches_are_visible = yes
 			}
 		}
-		cost = 5
+		cost = 0.2
 
 		bypass = {
 			OR = {
@@ -1678,7 +1678,7 @@ focus_tree = {
 		completion_reward = {
 			add_resource = {
 				type = oil
-				amount = 8
+				amount = 20
 				state = 662
 			}	
 
@@ -1729,7 +1729,7 @@ focus_tree = {
 		completion_reward = {
 			add_resource = {
 				type = oil
-				amount = 4
+				amount = 25
 				state = 450
 			}
 			450 = {
@@ -2804,10 +2804,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = ITA_steel_industry_in_terni
 		cost = 5
-		available = {
-			has_tech = synth_oil_experiments
-		}
-
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
@@ -10574,17 +10570,37 @@ focus_tree = {
 		search_filters = {}
 
 		completion_reward = {
-			custom_effect_tooltip = ITA_masters_of_the_aegean_claims_tt
-			every_state = {
+			every_country = {
 				limit = {
-					BUL_state_is_in_the_aegean_sea = yes
-					NOT = { is_owned_by = ROOT }
-					NOT = { is_claimed_by = ROOT }
+					OR = {
+						original_tag = GRE
+					}
+					has_civil_war = no
+					is_in_faction = no
+					NOT = {
+						has_war_with = ROOT
+						is_justifying_wargoal_against = ROOT
+					}
 				}
-				hidden_effect ={
-					ROOT = { add_state_claim = PREV }
+				country_event = {
+				    id = BBA_italy_interaction_events.41
+				    days = 2
+				    random = 6
 				}
-				custom_effect_tooltip = generic_ROOT_gains_claim_tt
+			}
+			IF = {
+				limit = {
+					has_completed_focus = ITA_deus_vult
+					is_faction_leader = no
+				}
+				create_faction = ITA_papal_faction 
+			}
+			IF = {
+				limit = {
+					has_completed_focus = ITA_mare_nostrum_bba
+					is_faction_leader = no
+				}
+				create_faction = ITA_roman_faction
 			}
 		}
 	}
@@ -10604,17 +10620,38 @@ focus_tree = {
 		search_filters = {}
 
 		completion_reward = {
-			custom_effect_tooltip = ITA_masters_of_the_mediterranean_claims_tt
-			every_state = {
+			every_country = {
 				limit = {
-					state_is_in_the_mediterranean_sea = yes
-					NOT = { is_owned_by = ROOT }
-					NOT = { is_claimed_by = ROOT }
+					OR = {
+						original_tag = POR
+						original_tag = SPR 
+					}
+					has_civil_war = no
+					is_in_faction = no
+					NOT = {
+						has_war_with = ROOT
+						is_justifying_wargoal_against = ROOT
+					}
 				}
-				hidden_effect ={
-					ROOT = { add_state_claim = PREV }
+				country_event = {
+				    id = BBA_italy_interaction_events.41
+				    days = 2
+				    random = 6
 				}
-				custom_effect_tooltip = generic_ROOT_gains_claim_tt
+			}
+			IF = {
+				limit = {
+					has_completed_focus = ITA_deus_vult
+					is_faction_leader = no
+				}
+				create_faction = ITA_papal_faction 
+			}
+			IF = {
+				limit = {
+					has_completed_focus = ITA_mare_nostrum_bba
+					is_faction_leader = no
+				}
+				create_faction = ITA_roman_faction
 			}
 		}
 	}
@@ -14373,6 +14410,7 @@ focus_tree = {
 	}
 
 	focus = {
+		
 		id = ITA_south_american_alliances
 		icon = GFX_focus_por_recover_latin_america
 		prerequisite = { focus = ITA_iberian_protection }
@@ -14382,7 +14420,7 @@ focus_tree = {
 		relative_position_id = ITA_iberian_protection
 		cost = 10
 		available = {
-			#NOT adding requirements here since it's a final focus and it would really overrcrowd tt
+			always = no
 		}
 
 		search_filters = {}
