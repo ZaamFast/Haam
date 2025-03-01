@@ -105,5 +105,402 @@ scripted_gui = {
 		}
         
 	}
+
+	st_open = {
+		context_type = player_context
+
+		window_name = "st_open_container"
+
+		parent_window_token = top_bar
+
+		visible = {
+			NOT = { has_country_flag = hidden_switch }
+			has_game_rule = {
+				rule = use_new_tool 
+				option = NO
+			}
+		}
+
+		effects = {
+			open_ST_click = {
+				if = {
+					limit = { ROOT = { NOT = { has_country_flag = transfer_enabled } } }
+					ROOT = { set_country_flag = transfer_enabled }
+				}
+				else = {
+					ROOT = { clr_country_flag = transfer_enabled }
+				}
+			}
+		}
+		triggers = {
+			open_ST_click_enabled = {
+				always = yes
+			}
+		}
+	}
+	
+	st_hide = {
+		context_type = player_context
+
+		window_name = "st_hide_container"
+
+		visible = {
+			has_game_rule = {
+				rule = use_new_tool 
+				option = NO 
+			}
+		}
+
+		effects = {
+			hide_ST_click = {
+				if = {
+					limit = { NOT = { has_country_flag = hidden_switch } }
+					set_country_flag = hidden_switch
+				}
+				else = {
+					clr_country_flag = hidden_switch
+				}
+			}
+		}
+		triggers = {
+			hide_ST_click_enabled = {
+				always = yes
+			}
+		}
+	}
+
+	st_state_manager_powers = {
+	
+		context_type = selected_state_context
+		
+		window_name = "st_state_manager_powers_container"
+		
+		visible = {
+			ROOT = {
+				is_ai = no
+				has_country_flag = transfer_enabled
+			}
+			OR = {
+				is_owned_and_controlled_by = ROOT
+				AND = {
+					has_game_rule = {
+						rule = allow_subject_transfers
+						option = FREE
+					}
+					any_country = {
+						is_ai = yes
+						is_subject_of = ROOT
+						owns_state = FROM
+					}
+				}
+				AND = {
+					has_game_rule = {
+						rule = allow_subject_transfers
+						option = LOW_AUTONOMY_ONLY
+					}
+					any_country = {
+						is_ai = yes
+						is_subject_of = ROOT
+						compare_autonomy_state < autonomy_colony
+						owns_state = FROM
+					}
+				}
+			}
+		}
+		
+		effects = {
+			
+			st_state_manager_power_mark_for_transfer_click = {
+				FROM.FROM = { 
+					set_state_flag = marked_for_transfer
+					#set_border_war = yes
+				}
+				add_to_variable = { ROOT.marked_states = 1 }
+			}
+			
+			st_state_manager_power_unmark_for_transfer_click = {
+				FROM.FROM = { 
+					clr_state_flag = marked_for_transfer 
+					#set_border_war = no
+				}
+				subtract_from_variable = { ROOT.marked_states = 1 }
+			}
+		}
+		
+		triggers = {
+		
+			st_state_manager_power_mark_for_transfer_click_enabled = {
+				FROM.FROM = {
+					NOT = { has_state_flag = marked_for_transfer }
+				}
+			}
+			st_state_manager_power_mark_for_transfer_visible = {
+				FROM.FROM = {
+					NOT = { has_state_flag = marked_for_transfer }
+				}
+			}
+			st_state_manager_power_unmark_for_transfer_visible = {
+				FROM.FROM = {
+					has_state_flag = marked_for_transfer
+				}
+			}
+		}
+		
+	}
+
+	st_take_state = {
+	
+		context_type = diplomatic_action
+		
+		window_name = "st_take_state"
+		
+		visible = {
+			ROOT = {
+				is_ai = no  
+			}
+		}
+		
+		dynamic_lists = {
+			# name of the grid box gui element
+			st_state_grid = {
+				array = owned_controlled_states
+				change_scope = yes
+				entry_container = "[st_give_state_entry_loc]" 
+			}
+		}
+		
+		effects = {
+			st_mark_click = {
+				THIS = { 
+					set_state_flag = marked_for_transfer 
+				}
+				add_to_variable = { ROOT.marked_states = 1 }
+			}
+			
+			st_unmark_click = {
+				THIS = { 
+					clr_state_flag = marked_for_transfer 
+				}
+				subtract_from_variable = { ROOT.marked_states = 1 }
+			}
+		
+			clear_all_markings_click = {
+				ROOT = { 
+					set_variable = { marked_states = 0 }
+				}
+				every_state = {
+					limit = {
+						has_state_flag = marked_for_transfer
+						is_owned_and_controlled_by = ROOT
+					}
+					clr_state_flag = marked_for_transfer
+				}
+			}
+			
+		}
+		
+		triggers = {
+			
+			mark_all_states_visible = {
+				always = no
+			}
+		
+			mark_colonial_states_visible = {
+				always = no
+			}
+			
+			clear_all_markings_click_enabled = {
+				check_variable = { ROOT.marked_states > 0 }
+			}
+		
+		}
+        
+	}
+
+	st_country_powers = {
+	
+		context_type = selected_country_context
+		
+		window_name = "st_subject_powers_container"
+		
+		visible = {
+			ROOT = {
+				is_ai = no
+				has_country_flag = transfer_enabled
+			}
+		}
+		
+		effects = {
+		
+			mark_all_states_click = {
+				set_temp_variable = { ROOT.marks = this}
+				var:marks = {
+					every_owned_state = {
+						limit = {
+							NOT = { has_state_flag = marked_for_transfer }
+						}
+						set_state_flag = marked_for_transfer
+						add_to_variable = { ROOT.marked_states = 1 }
+						#set_border_war = yes
+					}
+				}
+			}
+		
+			mark_colonial_states_click  = {
+				set_temp_variable = { ROOT.marks = this}
+				var:marks = {
+					every_owned_state = {
+						limit = {
+							NOT = { is_in_home_area = yes }
+							NOT = { is_core_of = PREV }
+							NOT = { has_state_flag = marked_for_transfer }
+						}
+						set_state_flag = marked_for_transfer
+						add_to_variable = { ROOT.marked_states = 1 }
+						#set_border_war = yes
+					}
+				}
+			}
+		
+			clear_all_markings_click = {
+				ROOT = { 
+					set_variable = { marked_states = 0 }
+				}
+				every_state = {
+					limit = {
+						has_state_flag = marked_for_transfer
+						OR = {
+							is_owned_and_controlled_by = ROOT
+							any_country = {
+								is_ai = yes
+								is_subject_of = ROOT
+								owns_state = PREV
+							}
+						}
+					}
+					clr_state_flag = marked_for_transfer
+					#set_border_war = no
+				}
+			}
+			
+			award_states_click = {
+				ROOT = { 
+					set_variable = { marked_states = 0 }
+				}
+				set_temp_variable = { ROOT.taker = this}
+				
+				every_state = {
+					limit = {
+						has_state_flag = marked_for_transfer
+						OR = {
+							is_owned_and_controlled_by = ROOT
+							any_country = {
+								is_ai = yes
+								is_subject_of = ROOT
+								owns_state = PREV
+							}
+						}
+					}
+					var:taker = { transfer_state = PREV }
+					clr_state_flag = marked_for_transfer
+					#set_border_war = no
+				}
+			}
+		}
+		
+		triggers = {
+		
+			mark_all_states_click_enabled = {
+				any_owned_state = {
+					NOT = { has_state_flag = marked_for_transfer }
+				}
+			}
+			
+			mark_all_states_visible = {
+				set_temp_variable = { ROOT.taker = this}
+				OR = {
+					ROOT = {
+						tag = var:taker
+					}
+					AND = {
+						has_game_rule = {
+							rule = allow_subject_transfers
+							option = FREE
+						}
+						any_country = {
+							is_ai = yes
+							is_subject_of = ROOT
+						}
+					}
+					AND = {
+						has_game_rule = {
+							rule = allow_subject_transfers
+							option = LOW_AUTONOMY_ONLY
+						}
+						any_country = {
+							is_ai = yes
+							is_subject_of = ROOT
+							compare_autonomy_state < autonomy_colony
+						}
+					}
+				}
+			}
+		
+			mark_colonial_states_click_enabled = {
+				any_owned_state = {
+					NOT = { is_in_home_area = yes }
+					NOT = { has_state_flag = marked_for_transfer }
+					NOT = { is_core_of = ROOT }
+				}
+			}
+			
+			mark_colonial_states_visible = {
+				set_temp_variable = { ROOT.taker = this}
+				OR = {
+					ROOT = {
+						tag = var:taker
+					}
+					AND = {
+						has_game_rule = {
+							rule = allow_subject_transfers
+							option = FREE
+						}
+						any_country = {
+							is_ai = yes
+							is_subject_of = ROOT
+						}
+					}
+					AND = {
+						has_game_rule = {
+							rule = allow_subject_transfers
+							option = LOW_AUTONOMY_ONLY
+						}
+						any_country = {
+							is_ai = yes
+							is_subject_of = ROOT
+							compare_autonomy_state < autonomy_colony
+						}
+					}
+				}
+			}
+			
+			clear_all_markings_click_enabled = {
+				check_variable = { ROOT.marked_states > 0 }
+			}
+		
+			award_states_click_enabled = {
+				check_variable = { ROOT.marked_states > 0 }
+				NOT = { 
+					ROOT = { 
+						all_owned_state = {
+							has_state_flag = marked_for_transfer
+						} 
+					}
+				}
+			}
+		
+		}
+        
+	}
 }
 
