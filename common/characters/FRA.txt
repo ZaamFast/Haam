@@ -186,7 +186,7 @@ characters={
 				original_tag = FRA
 			}
 			available = {
-				has_completed_focus = FRA_aggressive_focus
+				has_completed_focus = FRA_maurice_plan
 			}
 			cost = 100.000
 			traits = {
@@ -226,7 +226,7 @@ characters={
 				original_tag = FRA
 			}
 			available = {
-				has_completed_focus = FRA_defensive_focus
+				has_completed_focus = FRA_maxime_plan
 			}
 			cost = 100.000
 			traits = {

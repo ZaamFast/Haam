@@ -3759,26 +3759,7 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		
 	}
-	focus = {
-		id = FRA_camelots_roi
-		icon = GFX_goal_FRA_camelots_du_roi
-		cost = 10
-		prerequisite = {
-			focus = FRA_national_integralism
-		}
-		x = -2
-		y = 1
-		relative_position_id = FRA_national_integralism
-		
-		ai_will_do = {
-			factor = 3
-		}
-		completion_reward = {
-			add_war_support = 0.05
-			add_ideas = FRA_camelot
-		}
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
-	}
+
 	focus = {
 		id = FRA_social_nationalism
 		icon = GFX_goal_generic_national_unity
@@ -4898,7 +4879,7 @@
 	###############################
 	focus = {
 		id = FRA_militarist_society
-		icon = GFX_goal_FRA_militarist_society
+		icon = GFX_focus_generic_advanced_military_studies
 		cost = 10
 		prerequisite = {
 			focus = FRA_brumaire_movement
@@ -4959,7 +4940,7 @@
 	}
 	focus = {
 		id = FRA_legacy_of_the_grande_armee
-		icon = GFX_goal_FRA_legacy_of_the_grande_armee
+		icon = GFX_SOV_depoliticize_the_military_ccp_2d_sov_compatibility
 		cost = 10
 		prerequisite = {
 			focus = FRA_militarist_society
@@ -5035,7 +5016,7 @@
 	}
 	focus = {
 		id = FRA_our_natural_borders
-		icon = GFX_goal_FRA_our_natural_borders
+		icon = GFX_focus_focus_fra_border
 		cost = 10
 		prerequisite = {
 			focus = FRA_the_new_continental_system
@@ -5372,7 +5353,7 @@
 	}	
 	focus = {
 		id = FRA_split_belgium
-		icon = GFX_goal_generic_attack_belgium
+		icon = GFX_focus_BEL_dyle_plan
 		x = -1
 		y = 1
 
@@ -6991,14 +6972,14 @@
 	}
 	
 	focus = {
-		id = FRA_giraud_plan
-		icon = GFX_goal_FRA_giraud
+		id = FRA_maxime_plan
+		icon = GFX_goal_generic_defence
 		cost = 10
 		#prerequisite = {
 		#	focus = FRA_CHEDN
 		#}
 		mutually_exclusive = {
-			focus = FRA_de_gaulle_strategy
+			focus = FRA_maurice_plan
 		}
 		x = 48
 		y = 0
@@ -7061,11 +7042,11 @@
 		icon = GFX_goal_generic_construction2
 		cost = 5
 		prerequisite = {
-			focus = FRA_giraud_plan
+			focus = FRA_maxime_plan
 		}
 		x = -1
 		y = 1
-		relative_position_id = FRA_giraud_plan
+		relative_position_id = FRA_maxime_plan
 		
 		ai_will_do = {
 			factor = 2
@@ -7109,7 +7090,7 @@
 	
 	focus = {
 		id = FRA_heavy_armor_focus
-		icon = GFX_goal_generic_heavy_armour_french
+		icon = GFX_focus_NZL_bob_semple_tank
 		prerequisite = { focus = FRA_commission_fortified_regions }
 		x = -1
 		y = 2
@@ -7171,18 +7152,18 @@
 	}
 	
 	focus = {
-		id = FRA_de_gaulle_strategy
-		icon = GFX_goal_FRA_de_gaulle
+		id = FRA_maurice_plan
+		icon = GFX_goal_generic_major_war
 		cost = 10
 		#prerequisite = {
 		#	focus = FRA_CHEDN
 		#}
 		mutually_exclusive = {
-			focus = FRA_giraud_plan
+			focus = FRA_maxime_plan
 		}
 		x = 2
 		y = 0
-		relative_position_id = FRA_giraud_plan
+		relative_position_id = FRA_maxime_plan
 		
 		ai_will_do = {
 			factor = 0.75
@@ -7191,19 +7172,8 @@
 			every_army_leader = {
 				add_attack = 1
 			}
-			add_corps_commander_role={
-				character = FRA_charles_de_gaulle
-				traits={ media_personality harsh_leader armor_officer }
-				skill=4
-				attack_skill=4
-				defense_skill=4
-				planning_skill=3
-				logistics_skill=2
-				legacy_id=101
-			}
-			set_country_flag = de_gaulle_commander
 			custom_effect_tooltip = available_chief_of_army
-			show_ideas_tooltip = maurice_gamelin
+			show_ideas_tooltip = maxime_weygand
 		}
 	}
 	
@@ -7212,11 +7182,11 @@
 		icon = GFX_goal_generic_army_motorized
 		cost = 5
 		prerequisite = {
-			focus = FRA_de_gaulle_strategy
+			focus = FRA_maurice_plan
 		}
 		x = 1
 		y = 1
-		relative_position_id = FRA_de_gaulle_strategy
+		relative_position_id = FRA_maurice_plan
 		ai_will_do = {
 			factor = 2
 		}
@@ -7255,7 +7225,7 @@
 	
 	focus = {
 		id = FRA_infantry_focus
-		icon = GFX_focus_generic_army_modernizations
+		icon = GFX_goal_generic_allies_build_infantry
 		cost = 5
 		prerequisite = {
 			focus = FRA_the_mas38
@@ -7279,12 +7249,12 @@
 		icon = GFX_goal_generic_construct_military
 		cost = 10
 		prerequisite = {
-			focus = FRA_giraud_plan
-			focus = FRA_de_gaulle_strategy
+			focus = FRA_maxime_plan
+			focus = FRA_maurice_plan
 		}
 		x = 1
 		y = 1
-		relative_position_id = FRA_giraud_plan
+		relative_position_id = FRA_maxime_plan
 		available = {
 			735 = {
 				is_controlled_by = ROOT
@@ -7350,8 +7320,6 @@
 		}
 
 		completion_reward = {
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = FRA_hotchkiss
 			add_tech_bonus = {
 				name = FRA_infantry_tanks
 				bonus = 1
@@ -7362,7 +7330,7 @@
 	}
 	focus = {
 		id = FRA_the_somua_s35
-		icon = GFX_goal_FRA_somua
+		icon = GFX_SOV_development_of_tankograd_ccp_2d_sov_compatibility
 		cost = 10
 		prerequisite = {
 			focus = FRA_infantry_tanks
@@ -7391,7 +7359,7 @@
 	}
 	focus = {
 		id = FRA_army_reform
-		icon = GFX_goal_FRA_army_reform
+		icon = GFX_focus_chi_army_reform
 		cost = 10
 		prerequisite = {
 			focus = FRA_infantry_tanks
@@ -7616,7 +7584,7 @@
 	}
 	focus = {
 		id = FRA_mechanized_focus
-		icon = GFX_goal_mechanized_offensive
+		icon = GFX_focus_generic_mechanized
 		cost = 10
 		prerequisite = {
 			focus = FRA_motorized_focus
@@ -7645,7 +7613,7 @@
 	}
 	focus = {
 		id = FRA_tank_modernisation
-		icon = GFX_focus_chi_army_reform
+		icon = GFX_focus_generic_tank_assembly
 		cost = 10
 		prerequisite = {
 			focus = FRA_mechanized_focus
@@ -7675,8 +7643,8 @@
 		}
 	}
 	focus = {
-		id = FRA_light_medium_armor
-		icon = GFX_goal_generic_tank_map
+		id = GFX_focus_NOR_rikstanken
+		icon = GFX_goal_continuous_armor_production
 		prerequisite = { focus = FRA_mechanized_focus }
 		x = 1
 		y = 2
@@ -7702,7 +7670,7 @@
 		id = FRA_CHEDN
 		icon = GFX_goal_generic_naval_effort2
 		cost = 5
-		relative_position_id = FRA_giraud_plan
+		relative_position_id = FRA_maxime_plan
 		x = 11
 		y = 0
 		
