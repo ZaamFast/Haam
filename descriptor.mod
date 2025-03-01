@@ -11,4 +11,5 @@ tags={
 }
 name="Haam"
 supported_version="1.15.4"
+replace_path="history/countries"
 remote_file_id="3435444565"
