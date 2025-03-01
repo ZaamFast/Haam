@@ -4,3 +4,4 @@ tags={
 }
 name="haamtesting"
 supported_version="1.15.4"
+replace_path="history/countries"
