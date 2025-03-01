@@ -326,12 +326,7 @@ focus_tree = {
 		relative_position_id = SOV_infrastructure_effort_nsb
 		cost = 10
 
-		available = {
-			custom_trigger_tooltip = {
-				tooltip = SOV_fyp_controlled_factories_tier_1_tt
-				NOT = { num_of_controlled_factories < SOV_fyp_factory_requirement_tier_1 }
-			}
-		}
+
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
@@ -1388,7 +1383,7 @@ focus_tree = {
 		x = 2
 		y = 0
 		relative_position_id = SOV_national_specialists
-		cost = 5
+		cost = 10
 
 		mutually_exclusive = { focus = SOV_national_specialists }
 
