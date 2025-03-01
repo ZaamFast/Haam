@@ -8207,7 +8207,7 @@ formable_nations_mod_category = {
 						}
 					}
 					count_triggers = {
-						amount = 19
+						amount = 12
 						555 = { is_controlled_by = ROOT }
 						537 = { is_controlled_by = ROOT }
 						655 = { is_controlled_by = ROOT }
@@ -8280,8 +8280,6 @@ formable_nations_mod_category = {
 			614 = { add_core_of = ROOT }
 			597 = { add_core_of = ROOT }
 			743 = { add_core_of = ROOT }
-			598 = { add_core_of = ROOT }
-			613 = { add_core_of = ROOT }
 		}
 	}
 	formable_nations_khmer_empire = {
