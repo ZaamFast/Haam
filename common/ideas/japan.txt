@@ -384,7 +384,6 @@ ideas = {
 				mobilization_laws_cost_factor = -0.25
 				justify_war_goal_time = -0.2
 				research_speed_factor = -0.05
-				production_speed_industrial_complex_factor = -0.1
 				ai_desired_divisions_factor = 0.25
 			}
 		}
