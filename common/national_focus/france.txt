@@ -519,7 +519,7 @@
 			add_tech_bonus = {
 				name = FRA_nuclear_effort
 				bonus = 1
-				uses = 2
+				uses = 1
 				category = nuclear
 			}
 		}
@@ -1982,9 +1982,8 @@
 			factor = 1.2
 		}
 		completion_reward = {
-			unlock_decision_tooltip = FRA_nationalize_military_complex
 			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = paul_faure
+			show_ideas_tooltip = zivony_peshkov
 		}
 	}
 	focus = {
@@ -2000,7 +1999,6 @@
 			factor = 1
 		}
 		completion_reward = {
-			unlock_decision_tooltip = FRA_nationalize_aircraft
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = felix_gouin
 		}

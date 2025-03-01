@@ -1569,6 +1569,9 @@ characters={
 			allowed  = {
 				original_tag  = FRA
 			}
+			available = {
+				has_completed_focus = FRA_military_complex_nationalisation
+			}
 			traits  = {
 				war_industrialist 
 			}
@@ -1594,6 +1597,9 @@ characters={
 			idea_token = FRA_felix_gouin
 			allowed  = {
 				original_tag  = FRA
+			}
+			available = {
+				has_completed_focus = FRA_aircraft_manufacturer_nationalisation
 			}
 			traits  = {
 				captain_of_industry 
