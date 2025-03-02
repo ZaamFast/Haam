@@ -877,7 +877,7 @@ NMilitary = {
 	BASE_FORT_PENALTY = -0.15, 					   -- fort penalty
 	MULTIPLE_COMBATS_PENALTY = -0.5,               -- defender penalty if attacked from multiple directions
 	DIG_IN_FACTOR = 0.02,						   -- bonus factor for each dug-in level
-	ARMY_LEADER_XP_GAIN_PER_UNIT_IN_COMBAT = 0.2, -- XP gain per unit in combat
+	ARMY_LEADER_XP_GAIN_PER_UNIT_IN_COMBAT = 0.1, -- XP gain per unit in combat
 	CONSTANT_XP_RATIO_FOR_MULTIPLE_LEADERS_IN_SAME_COMBAT = 0.5, -- if there are multiple leaders in same combat, each one gets thisratio + (1-thisratio)/num leaders. amount of xp each general gets scales 1 0.75 0.66 etc for 1 2 3 generals
 	BASE_LEADER_TRAIT_GAIN_XP = 0.45,			   -- Base xp gain for traits per hour for armies
 	MAX_NUM_TRAITS = -1,						   -- cant have more, -1 to disable
@@ -3269,7 +3269,7 @@ NFocus = {
 	FOCUS_POINT_DAYS = 5,						-- Each point takes a week
 	FOCUS_PROGRESS_PEACE = 1,					-- Progress during peace
 	FOCUS_PROGRESS_WAR = 1,					-- Progress during war
-	MAX_SAVED_FOCUS_PROGRESS = 30,				-- This much progress can be saved while not having a focus selected
+	MAX_SAVED_FOCUS_PROGRESS = 25,				-- This much progress can be saved while not having a focus selected
 },
 
 NOperatives = {
@@ -3281,7 +3281,7 @@ NOperatives = {
 	AGENCY_UPGRADE_PER_OPERATIVE_SLOT = 5,			-- Number of upgrade needed to unlock an additional operative slot
 	MAX_OPERATIVE_SLOT_FROM_AGENCY_UPGRADES = 1,	-- max operative slots gained from upgrades
 	AGENCY_OPERATIVE_RECRUITMENT_TIME = 30,			-- Number of days to wait to have operative to recruit when an operative slot first becomes available
-	BECOME_SPYMASTER_PP_COST = 50,					-- Number of political power used to become Spy Master
+	BECOME_SPYMASTER_PP_COST = 0,					-- Number of political power used to become Spy Master
 	BECOME_SPYMASTER_MIN_UPGRADES = 3,				-- Number of agency upgrades you need before becoming Spy Master
 	BASE_COUNTER_INTELLIGENCE_RATING = 0.0,					-- Base national counter intelligence rating for all countries
 	AGENCY_DEFENSE_EFFECT_ON_HOSTILE_ACTION_COST = 0.2,			-- Defense factor that is responsible for multiplying the cost hostile actions against our country by its level and this value
