@@ -15654,7 +15654,7 @@ ai_will_do = {
 			}
 		}
 
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -15866,7 +15866,7 @@ ai_will_do = {
 		x = -1
 		y = 1
 		relative_position_id = SOV_embrace_the_black_hundreds
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -15934,7 +15934,7 @@ ai_will_do = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_embrace_the_black_hundreds
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -16405,7 +16405,7 @@ ai_will_do = {
 		completion_reward = {
 			add_timed_idea = {
 				idea = SOV_rebuild_the_nation
-				days = 540
+				days = 365
 			}
 		}
 	}
@@ -16570,7 +16570,7 @@ ai_will_do = {
 		x = -2
 		y = 2
 		relative_position_id = SOV_reopen_novodevichi
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -16947,7 +16947,7 @@ ai_will_do = {
 		x = -2
 		y = 1
 		relative_position_id = SOV_romanov_reconstruction
-		cost = 10
+		cost = 7
 		ai_will_do = {
 			factor = 1
 		}
@@ -16956,16 +16956,6 @@ ai_will_do = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
-			if = {
-				limit = {
-					195 = {
-						is_capital = no
-					}
-				}
-				set_capital = {
-					state = 195
-				}
-			}
 			195 = {
 				if = {
 					limit = {
@@ -17125,7 +17115,7 @@ ai_will_do = {
 		x = -1
 		y = 1
 		relative_position_id = SOV_reinstitute_the_mestnichestvo
-		cost = 10
+		cost = 7
 		ai_will_do = {
 			factor = 1
 		}
@@ -17176,7 +17166,7 @@ ai_will_do = {
 		x = 0
 		y = 2
 		relative_position_id = SOV_reinstitute_the_mestnichestvo
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -17765,7 +17755,7 @@ ai_will_do = {
 		x = -2
 		y = 1
 		relative_position_id = SOV_westward_bound
-		cost = 10
+		cost = 7
 		ai_will_do = {
 			factor = 1
 		}
@@ -17801,7 +17791,7 @@ ai_will_do = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_westward_bound 
-		cost = 10
+		cost = 7
 		ai_will_do = {
 			factor = 1
 		}
@@ -17838,7 +17828,7 @@ ai_will_do = {
 		x = 2
 		y = 1
 		relative_position_id = SOV_westward_bound
-		cost = 10
+		cost = 7
 		ai_will_do = {
 			factor = 1
 		}
