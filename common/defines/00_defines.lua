@@ -1963,7 +1963,7 @@ NNavy = {
 
 	NAVAL_CONVOY_DANGER_RATIOS = {
 		0.10,		-- not owned
-		0.10,		-- near coSOV_send_ultimatum_to_country_balticntrolled
+		0.10,		-- near controlled
 		0.10,		-- near owned
 		0.15,		-- controlled
 		0.15,		-- owned
