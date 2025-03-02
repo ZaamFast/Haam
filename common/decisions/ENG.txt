@@ -240,7 +240,7 @@ ENG_organize_the_blackshirts = {
 			NOT = { has_country_flag = ENG_restrained_march_flag }
 		}
 
-		cost = 25
+		cost = 0
 
 		fire_only_once = no
 
