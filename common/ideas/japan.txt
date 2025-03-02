@@ -1208,12 +1208,12 @@ ideas = {
 				navy_capital_ship_attack_factor = 0.15
 				naval_speed_factor = 0.1
 				naval_invasion_penalty = -0.15
-				navy_visibility = -0.1
 				positioning = 0.1
 				naval_invasion_prep_speed = 0.5
 				naval_invasion_capacity = 15
 				naval_invasion_planning_bonus_speed = 0.80
 				navy_fuel_consumption_factor = -0.25
+				sortie_efficiency = 20
 			}
 		}
 
