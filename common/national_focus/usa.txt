@@ -3304,6 +3304,7 @@ focus_tree = {
 
 		available = {
 			congress_low_support_trigger = yes
+			fascism > 0.1
 		}
 		
 		bypass = {
