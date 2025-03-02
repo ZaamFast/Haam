@@ -14791,7 +14791,7 @@ ai_will_do = {
 					controls_state = 617 #URUMQI
 					controls_state = 618 #DZUNGARIA
 				}
-				SIK = { #Relevant states under Sinkiang control
+				CHI = { #Relevant states under Sinkiang control
 					NOT = { has_war_with = ROOT }
 					controls_state = 617 #URUMQI
 					controls_state = 618 #DZUNGARIA
@@ -14803,9 +14803,9 @@ ai_will_do = {
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			hidden_effect = { #Decrease SIK's desire to join Chinese faction (and other AI strategies)
+			hidden_effect = { 
 				SOV_approach_sinkiang_diplomacy_effect = yes
-				SIK = {
+				CHI = {
 					add_ai_strategy = { #This is added in Gobi Gambit + all 3 investment decisions
 						type = alliance
 						id = SOV		
@@ -14833,13 +14833,13 @@ ai_will_do = {
 				}
 				custom_effect_tooltip = SOV_sinkiang_decisions_available_tt
 			}
-			else = { #If SIK in control of them
-				SIK = { country_event = { id = NSB_soviet_foreign_politics_events.270 hours = 6 random_hours = 6 } }
+			else = {
+				CHI = { country_event = { id = NSB_soviet_foreign_politics_events.270 hours = 6 random_hours = 6 } }
 				# IF THEY ACCEPT
 				custom_effect_tooltip = if_they_accept_tt
 				effect_tooltip = {
 					add_opinion_modifier = {
-						target = SIK
+						target = CHI
 						modifier = SOV_complied_with_our_demands
 					}
 					
@@ -14863,7 +14863,7 @@ ai_will_do = {
 				custom_effect_tooltip = if_they_refuse_tt
 				effect_tooltip = {
 					add_opinion_modifier = {
-						target = SIK
+						target = CHI
 						modifier = SOV_rejected_our_demands
 					}
 					# Tashkent - Frunze - Alma-Ata
@@ -14907,41 +14907,20 @@ ai_will_do = {
 
 		bypass = {
 			OR = {
-				NOT = { country_exists = PRC }
+				NOT = { country_exists = CHI }
 				owns_state = 622
 			}
 		}
 
 		available = {
 			has_government = communism
-			NOT = { has_war_with = PRC }
+			NOT = { has_war_with = CHI }
 			is_subject = no
 		}
 		
 		search_filters = {}
 
 		completion_reward = {
-			PRC = {
-				add_opinion_modifier = { #Good relations with Mao
-					target = ROOT
-					modifier = SOV_cooperating_with_us
-				}
-				add_relation_modifier = {
-					target = ROOT
-					modifier = SOV_soviet_chinese_relations
-				}
-				every_other_country = {
-					limit = {
-						SOV_is_free_chinese_tag = yes
-					}
-					add_opinion_modifier = { #Bad Relations with other Chinese tags
-						target = ROOT
-						modifier = SOV_cooperating_with_other
-					}
-				}
-			}
-			activate_targeted_decision = { target = PRC decision = SOV_send_infantry_equipment_asia }
-			custom_effect_tooltip = SOV_volunteers_allowed_mao_tt
 		}
 	}
 
@@ -15036,20 +15015,8 @@ ai_will_do = {
 					}
 					if = {
 						limit = {
-							tag = SIK
-							ROOT = { has_completed_focus = SOV_the_gobi_gambit }
-						}
-					}
-					else_if = {
-						limit = {
-							tag = PRC
-							ROOT = { has_completed_focus = SOV_two_red_flags }
-						}
-					}
-					else_if = {
-						limit = {
 							tag = CHI
-							ROOT = { has_completed_focus = SOV_support_the_kuomintang }
+							ROOT = { has_completed_focus = SOV_the_gobi_gambit }
 						}
 					}
 					else = {
@@ -15065,13 +15032,13 @@ ai_will_do = {
 			if = {
 				limit = {
 					has_completed_focus = SOV_the_gobi_gambit
-					country_exists = SIK
+					country_exists = CHI
 				}
-				every_state = { #Set cores for SIK
+				every_state = {
 					limit = {
 						is_core_of = CHI
 					}
-					add_core_of = SIK
+					add_core_of = CHI
 				}
 			}
 		}
@@ -15422,15 +15389,15 @@ ai_will_do = {
 		completion_reward = {
 			if = {
 				limit = {
-					SIK = { NOT = { has_government = ROOT } }
+					CHI = { NOT = { has_government = ROOT } }
 				}
 				create_wargoal = {
 					type = puppet_wargoal_focus
-					target = SIK
+					target = CHI
 				} 
 			}
 			else = {
-				SIK = { country_event = { id = NSB_soviet_foreign_politics_events.200 hours = 6 random_hours = 2 } }
+				CHI = { country_event = { id = NSB_soviet_foreign_politics_events.200 hours = 6 random_hours = 2 } }
 			}
 		}
 	}
@@ -18735,15 +18702,7 @@ ai_will_do = {
 				every_state = {
 					limit = {
 						OR = {
-							is_core_of = SIK
-							is_core_of = XSM
-							is_core_of = SHX
-							is_core_of = PRC
 							is_core_of = CHI
-							is_core_of = YUN
-							is_core_of = GXC
-							is_core_of = MEN
-							is_core_of = MAN
 						}
 					}
 					add_claim_by = ROOT
