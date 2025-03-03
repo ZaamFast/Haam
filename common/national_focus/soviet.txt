@@ -12095,10 +12095,11 @@ focus_tree = {
 		
 		available = { 
 			is_subject = no 
-			TAN = {
+			MON = {
 				OR = {
 					is_in_faction_with = ROOT
 					is_subject_of = ROOT
+					is_ai = yes
 				}
 			}
 		}
@@ -12106,7 +12107,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 
 		completion_reward = {
-			TAN = {	
+			MON = {	
 				country_event = { 
 					id = soviet.14 
 					hours = 6
