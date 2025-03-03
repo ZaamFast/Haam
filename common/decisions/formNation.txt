@@ -270,14 +270,6 @@ formable_nations_mod_category = {
 			OR = {
 				has_global_flag = no_limit
 				original_tag = GER
-				original_tag = AUS
-				original_tag = SHL
-				original_tag = MEK
-				original_tag = BAY
-				original_tag = PRE
-				original_tag = SAX
-				original_tag = HAN
-				original_tag = WUR
 			}
 		}
 		available = {
@@ -341,10 +333,6 @@ formable_nations_mod_category = {
 		complete_effect = { capital_scope = { set_state_flag = formable_nations_old_capital }
 			set_cosmetic_tag = FORM_GRO
 			
-			set_capital = 64
-			set_province_name = { id = 6558 name = "Posen" }
-			set_province_name = { id = 9503 name = "Straßburg" }
-			set_province_name = { id = 678 name = "Mülhausen" }
 			custom_effect_tooltip = core_land
 			hidden_effect = { sound_effect = complete_focus  set_country_flag = unform_available
 				5 = { add_core_of = ROOT }
@@ -379,15 +367,18 @@ formable_nations_mod_category = {
 				69 = { add_core_of = ROOT }
 				74 = { add_core_of = ROOT }
 				762 = { add_core_of = ROOT }
+				97 = { add_core_of = ROOT }
+				98 = { add_core_of = ROOT }
+				87 = { add_core_of = ROOT }
+				72 = { add_core_of = ROOT }
+				972 = { add_core_of = ROOT }
+				975 = { add_core_of = ROOT }
+				102 = { add_core_of = ROOT }
+				976 = { add_core_of = ROOT }
+				848 = { add_core_of = ROOT }
+				8 = { add_core_of = ROOT }
+
 			}
-			6 = { add_claim_by = ROOT }
-			8 = { add_claim_by = ROOT }
-			3 = { add_claim_by = ROOT }
-			7 = { add_claim_by = ROOT }
-			35 = { add_claim_by = ROOT }
-			36 = { add_claim_by = ROOT }
-			151 = { add_core_of = ROOT }
-			188 = { add_core_of = ROOT }
 		}
 	}
 	formable_nations_latin_union = {
