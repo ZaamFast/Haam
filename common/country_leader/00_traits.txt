@@ -1100,31 +1100,31 @@ leader_traits = {
 
 	champion_of_peace_1 = {
 		random = no
-		war_support_factor = -0.3
+		war_support_factor = -0.2
 		generate_wargoal_tension = 1
 	}
 
 	champion_of_peace_2 = {
 		random = no
-		war_support_factor = -0.24
+		war_support_factor = -0.1
 		generate_wargoal_tension = 0.80
 	}
 
 	champion_of_peace_3 = {
 		random = no
-		war_support_factor = -0.18
+		war_support_factor = 0
 		generate_wargoal_tension = 0.60
 	}
 
 	champion_of_peace_4 = {
 		random = no
-		war_support_factor = -0.12
+		war_support_factor = 0.1
 		generate_wargoal_tension = 0.40
 	}
 
 	champion_of_peace_5 = {
 		random = no
-		war_support_factor = -0.06
+		war_support_factor = 0.2
 		generate_wargoal_tension = 0.20
 	}
 
