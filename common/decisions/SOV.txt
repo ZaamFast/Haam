@@ -5386,7 +5386,7 @@ SOV_diplomacy_baltic_decision_category = {
 
 		days_remove = SOV_ultimatum_days
 
-		cost = SOV_send_ultimatum_to_country_cost
+		cost = 25
 
 		remove_effect = {
 			if = {
@@ -6627,11 +6627,11 @@ SOV_diplomacy_asia_decision_category = {
 			}
 			OR = {
 				AND = {
-					has_completed_focus = SOV_two_red_flags
+					has_completed_focus = 
 					FROM = { tag = PRC }
 				}
 				AND = {
-					has_completed_focus = SOV_support_the_kuomintang
+					has_completed_focus = SOV_support_the_kuomintan
 					FROM = { tag = CHI }
 				}
 			}
@@ -6826,7 +6826,7 @@ SOV_diplomacy_asia_decision_category = {
 		}
 
 		visible = {
-			has_completed_focus = SOV_the_gobi_gambit
+			has_completed_focus = SOV_intervention_in_china
 			SIK = { #Relevant states under Sinkiang control
 				SOV_is_valid_subject = yes
 				NOT = { has_war_with = ROOT }
@@ -6985,7 +6985,7 @@ SOV_diplomacy_asia_decision_category = {
 		}
 
 		visible = {
-			has_completed_focus = SOV_the_gobi_gambit
+			has_completed_focus = SOV_intervention_in_china
 			SIK = { #Relevant states under Sinkiang control
 				SOV_is_valid_subject = yes
 				NOT = { has_war_with = ROOT }
@@ -7152,7 +7152,7 @@ SOV_diplomacy_asia_decision_category = {
 		}
 
 		visible = {
-			has_completed_focus = SOV_the_gobi_gambit
+			has_completed_focus = SOV_intervention_in_china
 			SIK = { #Relevant states under Sinkiang control
 				SOV_is_valid_subject = yes
 				NOT = { has_war_with = ROOT }
@@ -7369,7 +7369,7 @@ SOV_diplomacy_asia_decision_category = {
 		}
 
 		visible = {
-			has_completed_focus = SOV_the_gobi_gambit
+			has_completed_focus = SOV_intervention_in_china
 			SIK = { #Relevant states under Sinkiang control
 				SOV_is_valid_subject = yes
 				NOT = { has_war_with = ROOT }
@@ -7618,7 +7618,7 @@ SOV_diplomacy_asia_decision_category = {
 		}
 
 		visible = {
-			has_completed_focus = SOV_the_gobi_gambit
+			has_completed_focus = SOV_intervention_in_china
 			country_exists = SIK
 			SIK = {
 				is_subject = no
@@ -8149,7 +8149,7 @@ prospect_for_resources = {
 		}
 
 		available = {
-			has_completed_focus = SOV_the_gobi_gambit
+			has_completed_focus = SOV_intervention_in_china
 			has_full_control_of_state = 617 #URUMQI
 			has_full_control_of_state = 619 #YARKAND
 			num_of_civilian_factories_available_for_projects > 0
@@ -8237,7 +8237,7 @@ prospect_for_resources = {
 		}
 
 		available = {
-			has_completed_focus = SOV_the_gobi_gambit
+			has_completed_focus = SOV_intervention_in_china
 			has_full_control_of_state = 617 #URUMQI
 			has_full_control_of_state = 618 #DZUNGARIA
 			num_of_civilian_factories_available_for_projects > 1
@@ -8328,7 +8328,7 @@ prospect_for_resources = {
 		}
 
 		available = {
-			has_completed_focus = SOV_the_gobi_gambit
+			has_completed_focus = SOV_intervention_in_china
 			has_full_control_of_state = 604 #QINGHAI
 			has_full_control_of_state = 755 #HAIXI
 			has_full_control_of_state = 756 #JIUQUAN
