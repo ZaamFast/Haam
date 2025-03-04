@@ -8,8 +8,6 @@ state = {
 
 		owner = CHL
 		add_core_of = CHL
-		add_core_of = RAP
-
 		buildings = {
 			infrastructure = 1
 			13294 = {

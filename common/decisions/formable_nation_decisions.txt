@@ -9682,7 +9682,6 @@ form_polynesia_category = {
 				original_tag = SOL
 				original_tag = FIJ
 				original_tag = NZL
-				original_tag = RAP
 			}
 		}
 
@@ -9712,7 +9711,6 @@ form_polynesia_category = {
 				original_tag = SOL
 				original_tag = FIJ
 				original_tag = NZL
-				original_tag = RAP
 			}
 			NOT = { has_global_flag = form_polynesia_flag }
 		}
