@@ -165,7 +165,7 @@ if = {
 	}
 }
 
-set_research_slots = 4
+set_research_slots = 3
 
 ##################
 ### CHARACTERS ###
@@ -173,7 +173,7 @@ set_research_slots = 4
 
 ### COUNTRY LEADERS ###
 store_core_states_on_game_start = yes
-#Set Kokoomus as Non-Aligned party #TODO_Manu: I can now kill the old string and be done with this
+#Set Kokoomus as Non-Aligned party
 set_party_name = {
 	ideology = neutrality
 	name = FIN_neutrality_party_kokoomus

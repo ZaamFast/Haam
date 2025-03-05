@@ -19,7 +19,7 @@ if = {
 
 starting_train_buffer = 1.5
 
-set_research_slots = 5
+set_research_slots = 4
 set_stability = 0.6
 IF = {
 	limit = {
@@ -120,7 +120,6 @@ if = {
 ################ BOP ##################
 #######################################
 
-#set_variable = { ITA_cores_lost_for_modifiers = 0 } #TODO_Manu: This will be killed once there is code support for has_bop_modifier or something like that
 set_variable = { ITA_bop_take_over_ministry_cost = 50 }
 set_variable = { ITA_bop_resign_ministry_cost = 15 }
 set_variable = { ITA_bop_liturgical_reforms_cd = 365 }
@@ -221,7 +220,7 @@ set_variable = { ITA_military_industry_dm_industrial_capacity_dockyard = 0 }
 set_variable = { ITA_military_industry_air_equipment_upgrade_xp_cost = 0 }
 
 add_dynamic_modifier = { modifier = ITA_military_industry_dynamic_modifier }
-add_ideas = ITA_hidden_research_penalties_ns #TODO_Manu: Hidden NS to apply research penalties as part of the Military Industry Dynamic Modifier. Delete when code support is in
+add_ideas = ITA_hidden_research_penalties_ns # Hidden NS to apply research penalties as part of the Military Industry Dynamic Modifier.
 
 
 #REGIO ESERCITO
@@ -875,7 +874,7 @@ recruit_character = ITA_curio_bernardis
 ##### MISSIOLINIS - TRIGGER EVENTS #####
 ########################################
 
-### IF NOT BBA, trigger the first Missiolini from here #TODO_Manu: PLEASE CHECK IF THIS ACTUALLY WORKS (character has just been recruited)
+### IF NOT BBA, trigger the first Missiolini from here
 if = {
 	limit = {
 		NOT = { has_dlc = "By Blood Alone" }
@@ -884,7 +883,7 @@ if = {
 }
 
 ITA_benito_mussolini = { unit_leader_event = { id = BBA_italy_missiolinis.11 days = 185 random_days = 5 } } # JUN 36 - Conquer Ethiopia  - DEC 36 - (170 days)
-#ITA_benito_mussolini = { unit_leader_event = { id = BBA_italy_missiolinis.21 days = 370 random_days = 5 } } # JAN 37 - Pacify Ethiopia - DEC 39 - (720 days) #TODO_Manu: This is now triggered after war with MTTH
+#ITA_benito_mussolini = { unit_leader_event = { id = BBA_italy_missiolinis.21 days = 370 random_days = 5 } } # JAN 37 - Pacify Ethiopia - DEC 39 - (720 days) #MM: This is now triggered after war with MTTH
 ITA_benito_mussolini = { unit_leader_event = { id = BBA_italy_missiolinis.31 days = 370 random_days = 5 } } # JAN 37 - Industrialization - DEC 37 - (350 days)
 ITA_benito_mussolini = { unit_leader_event = { id = BBA_italy_missiolinis.41 days = 735 random_days = 5 } } # JAN 38 - Increase Army - DEC 38 (350 days)
 ITA_benito_mussolini = { unit_leader_event = { id = BBA_italy_missiolinis.00 days = 1105 random_days = 5 } } # JAN 39 - Random mission dispatcher (350 days) - This event auto-triggers itself every 6 months

@@ -1171,6 +1171,13 @@ country_event = {
 		}
 		RAJ_orde_wingate = {
 			set_nationality = ETH
+			hidden_effect = { 
+				set_character_flag = is_in_ethiopia 
+				if = {
+					limit = { has_character_flag = is_in_raj }
+					clr_character_flag = is_in_raj
+				}
+			}
 		}
 	}
 }
@@ -1190,6 +1197,15 @@ country_event = {
 		}
 		RAJ_orde_wingate = {
 			set_nationality = RAJ
+			hidden_effect = {
+				if = {
+					limit = {
+						has_character_flag = is_in_ethiopia
+					}
+					clr_character_flag = is_in_ethiopia
+				}
+				set_character_flag = is_in_raj
+			}
 		}
 	}
 }

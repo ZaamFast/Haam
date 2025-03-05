@@ -89,7 +89,7 @@ focus_tree = {
 			}
 		}
 
-		completion_reward = { #TODO_Manu: This is just copy-pasted from the old focus -> Is this what we want?
+		completion_reward = {
 			if = {
 				limit = {
 					all_owned_state = {
@@ -205,7 +205,7 @@ focus_tree = {
 			}
 		}
 
-		completion_reward = { #TODO_Manu: This is just copy-pasted from the old focus -> Is this what we want?
+		completion_reward = {
 			IF = {
 				limit = {
 					any_owned_state = {
@@ -326,7 +326,12 @@ focus_tree = {
 		relative_position_id = SOV_infrastructure_effort_nsb
 		cost = 10
 
-
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = SOV_fyp_controlled_factories_tier_1_tt
+				NOT = { num_of_controlled_factories < SOV_fyp_factory_requirement_tier_1 }
+			}
+		}
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
@@ -342,7 +347,7 @@ focus_tree = {
 			}
 		}
 
-		completion_reward = { #TODO_Manu: This is just copy-pasted from the old focus -> Is this what we want?
+		completion_reward = {
 			random_owned_controlled_state = {
 				limit = {
 					industrial_complex > 0
@@ -392,7 +397,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = SOV_finish_the_five_year_plan
-		cost = 2
+		cost = 10
 
 		ai_will_do = {
 			factor = 1
@@ -1383,7 +1388,7 @@ focus_tree = {
 		x = 2
 		y = 0
 		relative_position_id = SOV_national_specialists
-		cost = 10
+		cost = 5
 
 		mutually_exclusive = { focus = SOV_national_specialists }
 
@@ -3594,7 +3599,7 @@ focus_tree = {
 						#}
 					#}
 					#custom_effect_tooltip = SOV_an_oceangoing_navy_shbb_tt
-				create_equipment_variant = { #TODO_Manu: Engine should be 3 (but also should Yamato's)
+				create_equipment_variant = { #MM: Engine should be 3 (but also should Yamato's)
 					name = "Sovetsky Soyuz Class"
 					type = ship_hull_super_heavy_1
 					name_group = SOV_STATES
@@ -4245,6 +4250,18 @@ focus_tree = {
 		relative_position_id = SOV_pc_of_mechanical_engineering
 		cost = 10
 
+		available = {
+			if = {
+				limit = {
+					has_dlc = "No Step Back"
+				}
+				has_tech = improved_medium_tank_chassis
+			}
+			else = {
+				has_tech = improved_medium_tank
+			}
+		}
+		
 		search_filters = {FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
@@ -4718,7 +4735,6 @@ focus_tree = {
 				tooltip = SOV_fyp_controlled_factories_tier_4_tt
 				NOT = { num_of_controlled_factories < SOV_fyp_factory_requirement_tier_4 }
 			}
-			#TODO_Manu: This could require X num of factories to have been relocated
 		}
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_ARMY_XP}
@@ -7199,7 +7215,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = SOV_the_zinovyevite_terrorist_center
-		cost = 5
+		cost = 10
 
 		available = {
 
@@ -12095,11 +12111,10 @@ focus_tree = {
 		
 		available = { 
 			is_subject = no 
-			MON = {
+			TAN = {
 				OR = {
 					is_in_faction_with = ROOT
 					is_subject_of = ROOT
-					is_ai = yes
 				}
 			}
 		}
@@ -12107,7 +12122,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 
 		completion_reward = {
-			MON = {	
+			TAN = {	
 				country_event = { 
 					id = soviet.14 
 					hours = 6
@@ -14663,6 +14678,12 @@ ai_will_do = {
 			modifier = {
 				factor = 0
 				has_civil_war = yes
+			}
+			modifier = {
+				factor = 0
+				PER = {
+					has_government = ROOT
+				}
 			}	
 		}
 		will_lead_to_war_with = PER
@@ -14792,7 +14813,7 @@ ai_will_do = {
 					controls_state = 617 #URUMQI
 					controls_state = 618 #DZUNGARIA
 				}
-				CHI = { #Relevant states under Sinkiang control
+				SIK = { #Relevant states under Sinkiang control
 					NOT = { has_war_with = ROOT }
 					controls_state = 617 #URUMQI
 					controls_state = 618 #DZUNGARIA
@@ -14804,9 +14825,9 @@ ai_will_do = {
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			hidden_effect = { 
+			hidden_effect = { #Decrease SIK's desire to join Chinese faction (and other AI strategies)
 				SOV_approach_sinkiang_diplomacy_effect = yes
-				CHI = {
+				SIK = {
 					add_ai_strategy = { #This is added in Gobi Gambit + all 3 investment decisions
 						type = alliance
 						id = SOV		
@@ -14834,13 +14855,13 @@ ai_will_do = {
 				}
 				custom_effect_tooltip = SOV_sinkiang_decisions_available_tt
 			}
-			else = {
-				CHI = { country_event = { id = NSB_soviet_foreign_politics_events.270 hours = 6 random_hours = 6 } }
+			else = { #If SIK in control of them
+				SIK = { country_event = { id = NSB_soviet_foreign_politics_events.270 hours = 6 random_hours = 6 } }
 				# IF THEY ACCEPT
 				custom_effect_tooltip = if_they_accept_tt
 				effect_tooltip = {
 					add_opinion_modifier = {
-						target = CHI
+						target = SIK
 						modifier = SOV_complied_with_our_demands
 					}
 					
@@ -14864,7 +14885,7 @@ ai_will_do = {
 				custom_effect_tooltip = if_they_refuse_tt
 				effect_tooltip = {
 					add_opinion_modifier = {
-						target = CHI
+						target = SIK
 						modifier = SOV_rejected_our_demands
 					}
 					# Tashkent - Frunze - Alma-Ata
@@ -14908,20 +14929,41 @@ ai_will_do = {
 
 		bypass = {
 			OR = {
-				NOT = { country_exists = CHI }
+				NOT = { country_exists = PRC }
 				owns_state = 622
 			}
 		}
 
 		available = {
 			has_government = communism
-			NOT = { has_war_with = CHI }
+			NOT = { has_war_with = PRC }
 			is_subject = no
 		}
 		
 		search_filters = {}
 
 		completion_reward = {
+			PRC = {
+				add_opinion_modifier = { #Good relations with Mao
+					target = ROOT
+					modifier = SOV_cooperating_with_us
+				}
+				add_relation_modifier = {
+					target = ROOT
+					modifier = SOV_soviet_chinese_relations
+				}
+				every_other_country = {
+					limit = {
+						SOV_is_free_chinese_tag = yes
+					}
+					add_opinion_modifier = { #Bad Relations with other Chinese tags
+						target = ROOT
+						modifier = SOV_cooperating_with_other
+					}
+				}
+			}
+			activate_targeted_decision = { target = PRC decision = SOV_send_infantry_equipment_asia }
+			custom_effect_tooltip = SOV_volunteers_allowed_mao_tt
 		}
 	}
 
@@ -15016,8 +15058,20 @@ ai_will_do = {
 					}
 					if = {
 						limit = {
-							tag = CHI
+							tag = SIK
 							ROOT = { has_completed_focus = SOV_the_gobi_gambit }
+						}
+					}
+					else_if = {
+						limit = {
+							tag = PRC
+							ROOT = { has_completed_focus = SOV_two_red_flags }
+						}
+					}
+					else_if = {
+						limit = {
+							tag = CHI
+							ROOT = { has_completed_focus = SOV_support_the_kuomintang }
 						}
 					}
 					else = {
@@ -15033,13 +15087,13 @@ ai_will_do = {
 			if = {
 				limit = {
 					has_completed_focus = SOV_the_gobi_gambit
-					country_exists = CHI
+					country_exists = SIK
 				}
-				every_state = {
+				every_state = { #Set cores for SIK
 					limit = {
 						is_core_of = CHI
 					}
-					add_core_of = CHI
+					add_core_of = SIK
 				}
 			}
 		}
@@ -15390,15 +15444,15 @@ ai_will_do = {
 		completion_reward = {
 			if = {
 				limit = {
-					CHI = { NOT = { has_government = ROOT } }
+					SIK = { NOT = { has_government = ROOT } }
 				}
 				create_wargoal = {
 					type = puppet_wargoal_focus
-					target = CHI
+					target = SIK
 				} 
 			}
 			else = {
-				CHI = { country_event = { id = NSB_soviet_foreign_politics_events.200 hours = 6 random_hours = 2 } }
+				SIK = { country_event = { id = NSB_soviet_foreign_politics_events.200 hours = 6 random_hours = 2 } }
 			}
 		}
 	}
@@ -18703,7 +18757,15 @@ ai_will_do = {
 				every_state = {
 					limit = {
 						OR = {
+							is_core_of = SIK
+							is_core_of = XSM
+							is_core_of = SHX
+							is_core_of = PRC
 							is_core_of = CHI
+							is_core_of = YUN
+							is_core_of = GXC
+							is_core_of = MEN
+							is_core_of = MAN
 						}
 					}
 					add_claim_by = ROOT

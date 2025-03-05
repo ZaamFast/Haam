@@ -103,7 +103,7 @@ ideas = {
 			}		
 		}
 
-#		sp_multi_charge_large_caliber_gun_small_size_ns = { #TODO_Manu: Used for Small version of V-3 SP. Uncomment if Code Support gets implemented 
+#		sp_multi_charge_large_caliber_gun_small_size_ns = { #MM: Used for Small version of V-3 SP. Uncomment if Code Support gets implemented 
 #			allowed = {
 #				always = no
 #			}
@@ -1948,6 +1948,17 @@ ideas = {
 						has_dlc = "Gotterdammerung"
 					}
 				}
+
+				NOT = {
+					AND = {
+						OR = {
+							original_tag = PER
+							original_tag = IRQ
+							original_tag = RAJ
+						}
+						has_dlc = "Graveyard of Empires"
+					}
+				}
 			}
 			
 			cost = 150
@@ -2019,6 +2030,17 @@ ideas = {
 					AND = {
 						OR = { tag = HUN tag = AUS tag = BEL tag = COG }
 						has_dlc = "Gotterdammerung"
+					}
+				}
+
+				NOT = {
+					AND = {
+						OR = {
+							original_tag = PER
+							original_tag = IRQ
+							original_tag = RAJ
+						}
+						has_dlc = "Graveyard of Empires"
 					}
 				}
 			}

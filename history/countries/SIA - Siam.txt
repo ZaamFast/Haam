@@ -43,7 +43,7 @@ recruit_character = SIA_kuang_abhayavongsa
 recruit_character = SIA_thawee_punyaketu
 recruit_character = SIA_phot_bhahalyodin
 
-
+add_ideas = idea_SIA_army_of_siam
 # Starting tech
 set_technology = {
 	infantry_weapons = 1

@@ -745,7 +745,6 @@ political_actions = {
 		}
 
 		available = {
-			has_completed_focus = COG_south_to_lake_malawi
 			FROM = {
 				is_fully_controlled_by = ROOT
 			}
@@ -753,15 +752,13 @@ political_actions = {
 
 		state_target = yes
 
+		targets = { 770 897 }
+
 		target_trigger = {
 			FROM = {
 				impassable = no	
 				NOT = {
 					is_core_of = ROOT
-				}
-				OR = {
-					state = 770
-					state = 897
 				}
 			}
 		}
@@ -783,6 +780,14 @@ political_actions = {
 				add_core_of = ROOT
 			}
 		}
+
+		cancel_trigger = {
+			NOT = {
+				FROM = {
+					is_fully_controlled_by = ROOT
+				}
+			} 
+		}
 	}
 
 	COG_core_conquered_state_mittelafrika = {
@@ -802,20 +807,15 @@ political_actions = {
 		}
 
 		available = {
-			has_completed_focus = COG_colonial_administration
 			FROM = {
 				is_fully_controlled_by = ROOT
 			}
 		} 
 
-		state_target = yes
+		state_target = africa
 
 		target_trigger = {
 			FROM = {
-				impassable = no	
-				NOT = {
-					is_core_of = ROOT
-				}
 				OR = {
 					region = 223
 					region = 215
@@ -827,6 +827,10 @@ political_actions = {
 					region = 224
 					region = 185
 				}
+				NOT = {
+					is_core_of = ROOT
+				}
+				impassable = no	
 			}
 		}
 
@@ -847,9 +851,15 @@ political_actions = {
 				add_core_of = ROOT
 			}
 		}
+
+		cancel_trigger = {
+			NOT = {
+				FROM = {
+					is_fully_controlled_by = ROOT
+				}
+			} 
+		}
 	}
-
-
 
 }
 
@@ -934,7 +944,6 @@ COG_industrial_investment_decisions = {
 			custom_effect_tooltip = COG_investments_into_civ_factory_tt
 
 		}
-
 	}
 
 	# Invest Funds into Local Villages
@@ -2721,8 +2730,10 @@ COG_anti_colonialism_category = {
 					has_active_resistance = yes
 				}
 			}
-			
 		}
+		
+		target_array = global.colonial_powers
+
 		target_root_trigger = { original_tag = COG } 
 		# on_map_mode = map_only
 		fire_only_once = yes  

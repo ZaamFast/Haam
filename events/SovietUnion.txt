@@ -463,7 +463,7 @@ country_event = {
 	
 	option = {
 		name = soviet.16.a
-		annex_country = { target = MON }
+		annex_country = { target = TAN }
 		hidden_effect = {
 			SOV = {
 				country_event = { days = 1 id = news.14 }
@@ -1439,7 +1439,7 @@ country_event = {
 }
 
 ## Purge - Fighting defensive war against major
-#country_event = { #------------------------------------> No longer happening (NSB) -> TODO_Manu: Maybe adapt it to NSB
+#country_event = { #------------------------------------> No longer happening (NSB)
 #	id = soviet.46
 #	title = soviet.46.t
 #	desc = soviet.46.d

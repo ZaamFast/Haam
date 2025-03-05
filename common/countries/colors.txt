@@ -404,8 +404,8 @@ BOT = {
 	color_ui = rgb { 11 132 112 }
 }
 PAK = {
-	color = rgb { 21 38 66 }
-	color_ui = rgb { 21 38 66 }
+	color = rgb { 0 102 0  }
+	color_ui = rgb { 0 102 0  }
 }
 #WGR = {
 #    color = rgb { 195 236 230 } # The colors are set to be more are less what we are used to
@@ -827,10 +827,7 @@ GRN = {
 	color = rgb { 255 80 80 }
 	color_ui = rgb { 179 0 0 }
 }
-RAP = {
-	color = rgb { 204 0 0 }
-	color_ui = rgb { 102 0 0 }
-}
+
 GAR = {
 	color = rgb { 128 128 255 }
 	color_ui = rgb { 0 0 128 }
@@ -1023,5 +1020,34 @@ KUB = {
 	color = rgb { 102 102 153 }
 	color_ui = rgb { 61 61 92 }
 }
+DIP = {
+	color = rgb { 125 41 49 }
+	color_ui = rgb { 125 41 49 }
+}
+PSH = {
+	color = rgb { 31 138 31 }
+	color_ui = rgb { 31 138 31 }
+}
+KLT = {
+	color = rgb { 0 171 0 }
+	color_ui = rgb { 0 171 0 }	
+}
+FSA = {
+	color = rgb { 0 179 60 }
+	color_ui = rgb { 0 102 34 }	
+}
+IMO = {
+	color = rgb { 242 242 242 }
+	color_ui = rgb { 166 166 166 }	
+}
+BLC = {
+	color = rgb { 77 153 0 }
+	color_ui = rgb { 38 77 0 }	
+}
+KUR = {
+	color = rgb { 234 179 30 }
+	color_ui = rgb { 255 153 0 }	
+}
+
 
 

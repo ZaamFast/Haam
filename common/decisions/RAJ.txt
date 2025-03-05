@@ -4,7 +4,7 @@ RAJ_population_decisions = {
 
 		icon = generic_construction
 		
-		state_target = yes
+		state_target = any_owned_state
 		
 		visible = { 
 			ROOT = { 
@@ -26,7 +26,6 @@ RAJ_population_decisions = {
 		target_trigger = {			
 			FROM = {
 				is_core_of = ROOT
-				is_owned_by = ROOT
 				is_controlled_by = ROOT
 				NOT = {
 					state = 439

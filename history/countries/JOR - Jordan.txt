@@ -23,6 +23,9 @@ if = {
 
 set_convoys = 5
 
+# TODO_GoE - Add DLC checks
+set_cosmetic_tag = JOR_emirate
+
 1939.1.1 = {
 
 	add_political_power = 1198
@@ -87,6 +90,8 @@ set_popularities = {
 	neutrality = 50
 }
 
+recruit_character = JOR_abdullah_bin_al_hussein
+
 create_country_leader = {
 	name = "Hashim Kheir"
 	desc = ""
@@ -102,16 +107,6 @@ create_country_leader = {
 	desc = ""
 	picture = GFX_portrait_Saeed_Ahmadi
 	ideology = fascism_ideology
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Abdullah bin al-Hussein"
-	desc = ""
-	picture = GFX_portrait_Abdullah_bin_al_Hussein
-	ideology = despotism
 	traits = {
 		#
 	}
