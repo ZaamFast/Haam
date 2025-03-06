@@ -474,7 +474,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GER_lower_taxes
-		cost = 10
+		cost = 5
 		available = {
 		}
 
@@ -733,7 +733,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GER_agricultural_reforms
-		cost = 10
+		cost = 5
 		available = {
 			OR ={
 				59 = { #Hannover
@@ -852,7 +852,7 @@ focus_tree = {
 		x =-1
 		y = 1
 		relative_position_id = GER_wirtschaftswunder
-		cost = 10
+		cost = 5
 		available = {
 			OR = {
 				has_war = yes
@@ -908,7 +908,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GER_wirtschaftswunder
-		cost = 10
+		cost = 5
 		available = {
 			OR = {
 				has_war = yes
@@ -1112,7 +1112,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = GER_construct_the_reichsautobahn
-		cost = 10
+		cost = 5
 		available = {
 			51 = { 
 				is_fully_controlled_by = ROOT
@@ -5565,7 +5565,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = GER_form_the_jagdwaffe
-		cost = 10
+		cost = 5
 		available = {
 			GER_hermann_goring = {
 				is_air_chief = no
@@ -5612,14 +5612,8 @@ focus_tree = {
 		x = -1
 		y = 2
 		relative_position_id = GER_reorganize_the_luftwaffe
-		cost = 10
+		cost = 5
 		available = {
-			GER_hermann_goring = {
-				is_air_chief = no
-			}
-			NOT = {
-				has_completed_focus = GER_ascension_of_goring
-			}
 		}
 
 		search_filters = {}
@@ -5766,7 +5760,7 @@ focus_tree = {
 		x = 2
 		y = 2
 		relative_position_id = GER_reorganize_the_luftwaffe
-		cost = 10
+		cost = 5
 		available = {
 			has_war_with_major = yes
 		}
@@ -6089,7 +6083,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = GER_solve_the_logistical_bottlenecks
-		cost = 5
+		cost = 10
 		available = {
 		}
 
@@ -8815,24 +8809,9 @@ focus_tree = {
 				limit = { has_dlc = "Gotterdammerung" }
 
 				custom_trigger_tooltip = {
-					tooltip = GER_anschluss_army_trigger_tt
-					fighting_army_strength_ratio = {
-						tag = AUS
-						ratio > global.deployed_manpower_ratio_needed_for_anschluss
-					}
-				}
-			}
-
-			ELSE = {
-				has_army_manpower = { size > 499999 }
-				
-				custom_trigger_tooltip = {
-				 	tooltip = GER_anschluss_eq_trigger_tt
-				 	check_variable = { num_equipment_in_armies_k@infantry_equipment > 50 }
 				}
 			}
 			
-			NOT = { has_idea = rhineland_challenge_met }
 			if = {
 				limit = {
 					SWI = { has_completed_focus = SWI_gotthard_union }
@@ -9721,7 +9700,6 @@ focus_tree = {
 
 		available = {
 			is_subject = no
-			has_army_manpower = { size > 724999 } #80 div
 		}
 		
 		cancel = {
@@ -10049,7 +10027,6 @@ focus_tree = {
 		
 		available = { 
 			is_subject = no
-			has_army_manpower = { size > 749999 }
 		}
 
 		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_HISTORICAL }
@@ -11421,7 +11398,6 @@ focus_tree = {
 
 		available = {
 			is_subject = no
-			has_army_manpower = { size > 949999 } #100 div			
 			#Make custom trigger tooltip here
 			85 = {
 				owner = {
