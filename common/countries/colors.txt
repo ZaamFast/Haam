@@ -864,18 +864,6 @@ IAS = {
 	color = rgb { 0 153 51 }
 	color_ui = rgb { 0 51 17 }
 }
-YUC = {
-	color = rgb { 255 26 26 }
-	color_ui = rgb { 102 0 0 }
-}
-RIG = {
-	color = rgb { 0 0 128 }
-	color_ui = rgb { 0 0 51 }
-}
-QUE = {
-	color = rgb { 0 102 255 }
-	color_ui = rgb { 0 31 77 }
-}
 KAT = {
 	color = rgb { 204 41 0 }
 	color_ui = rgb { 128 26 0 }
@@ -1048,6 +1036,3 @@ KUR = {
 	color = rgb { 234 179 30 }
 	color_ui = rgb { 255 153 0 }	
 }
-
-
-
