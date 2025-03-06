@@ -32,7 +32,6 @@ equipment_modules = {
 		}
 
 		critical_parts = { damaged_light_guns }
-		manpower = 500
 xp_cost = 0
 	}
 
@@ -64,7 +63,6 @@ xp_cost = 0
 			convert_cost_ic = 45 #conversion cost from that specific module
 		}
 		critical_parts = { damaged_light_guns }
-		manpower = 500
 xp_cost = 0
 	}
 
@@ -95,7 +93,6 @@ xp_cost = 0
 			convert_cost_ic = 45
 		}
 		critical_parts = { damaged_light_guns }
-		manpower = 500
 xp_cost = 0
 	}
 
@@ -129,7 +126,6 @@ xp_cost = 0
 			convert_cost_ic = 120
 		}
 		critical_parts = { damaged_light_guns }
-		manpower = 500
 xp_cost = 0
 	}
 
@@ -159,7 +155,6 @@ xp_cost = 0
 			convert_cost_ic = 100
 		}
 		critical_parts = { damaged_light_guns }
-		manpower = 500
 xp_cost = 0
 	}
 
@@ -194,7 +189,6 @@ xp_cost = 0
 			convert_cost_ic = 55 #conversion cost from that specific module
 		}
 		critical_parts = { damaged_light_guns }
-		manpower = 500
 xp_cost = 0
 	}
 
@@ -229,7 +223,6 @@ xp_cost = 0
 			convert_cost_ic = 55
 		}
 		critical_parts = { damaged_light_guns }
-		manpower = 500
 xp_cost = 0
 	}
 
@@ -264,7 +257,6 @@ xp_cost = 0
 			convert_cost_ic = 130
 		}
 		critical_parts = { damaged_light_guns }
-		manpower = 500
 xp_cost = 0
 	}
 
@@ -302,7 +294,6 @@ xp_cost = 0
 			module_category = ship_heavy_battery
 			convert_cost_ic = 700
 		}
-		manpower = 1000
 		critical_parts = { damaged_heavy_guns }
 xp_cost = 0
 	}
@@ -336,7 +327,6 @@ xp_cost = 0
 			module = ship_heavy_battery_1
 			convert_cost_ic = 600
 		}
-		manpower = 1000
 		critical_parts = { damaged_heavy_guns }
 xp_cost = 0
 	}
@@ -370,7 +360,6 @@ xp_cost = 0
 			module = ship_heavy_battery_2
 			convert_cost_ic = 600
 		}
-		manpower = 1000
 		critical_parts = { damaged_heavy_guns }
 xp_cost = 0
 	}
@@ -407,7 +396,6 @@ xp_cost = 0
 			module = ship_heavy_battery_3
 			convert_cost_ic = 800
 		}
-		manpower = 1000
 		critical_parts = { damaged_heavy_guns }
 xp_cost = 0
 	}
@@ -433,7 +421,6 @@ xp_cost = 0
 		add_average_stats = {
 			hg_armor_piercing = 45
 		}
-		manpower = 1500
 		critical_parts = { damaged_heavy_guns }
 xp_cost = 0
 	}
@@ -831,7 +818,6 @@ xp_cost = 0
 			convert_cost_ic = 100
 		}
 		critical_parts = { damaged_secondaries }
-		manpower = 300
 xp_cost = 0
 	}
 
@@ -857,7 +843,6 @@ xp_cost = 0
 			module_category = ship_secondaries
 			convert_cost_ic = 120
 		}
-		manpower = 300
 		critical_parts = { damaged_secondaries }
 xp_cost = 0
 	}
@@ -891,7 +876,6 @@ xp_cost = 0
 			module_category = ship_dp_secondaries
 			convert_cost_ic = 100
 		}
-		manpower = 300
 		critical_parts = { damaged_secondaries }
 xp_cost = 0
 	}
@@ -926,7 +910,6 @@ xp_cost = 0
 			module_category = ship_dp_secondaries
 			convert_cost_ic = 150
 		}
-		manpower = 300
 		critical_parts = { damaged_secondaries }
 xp_cost = 0
 	}
@@ -961,7 +944,6 @@ xp_cost = 0
 			module_category = ship_dp_secondaries
 			convert_cost_ic = 180
 		}
-		manpower = 300
 		critical_parts = { damaged_secondaries }
 xp_cost = 0
 	}
@@ -996,7 +978,6 @@ xp_cost = 0
 			module_category = ship_dp_secondaries
 			convert_cost_ic = 200
 		}
-		manpower = 300
 		critical_parts = { damaged_secondaries }
 xp_cost = 0
 	}
@@ -1027,7 +1008,6 @@ xp_cost = 0
 			module_category = ship_anti_air
 			convert_cost_ic = 60
 		}
-		manpower = 300
 xp_cost = 0
 	}
 
@@ -1056,7 +1036,6 @@ xp_cost = 0
 			module = ship_anti_air_1
 			convert_cost_ic = 60
 		}
-		manpower = 300
 xp_cost = 0
 	}
 	ship_anti_air_3 = {
@@ -1083,7 +1062,6 @@ xp_cost = 0
 			module = ship_anti_air_2
 			convert_cost_ic = 60
 		}
-		manpower = 300
 xp_cost = 0
 	}
 	ship_anti_air_4 = {
@@ -1111,7 +1089,6 @@ xp_cost = 0
 			module = ship_anti_air_3
 			convert_cost_ic = 50
 		}
-		manpower = 300
 xp_cost = 0
 	}
 
@@ -2603,7 +2580,7 @@ xp_cost = 0
 			carrier_size = 2
 			build_cost_ic = 1500
 		}
-		manpower = 50 #outside the add_stats section for code reasons
+		manpower = 500 #outside the add_stats section for code reasons
 		multiply_stats = {
 			naval_speed = -0.05
 		}
@@ -2627,7 +2604,7 @@ xp_cost = 0
 			build_cost_ic = 2000
 		}
 		mega_carrier = yes
-		manpower = 80 #outside the add_stats section for code reasons
+		manpower = 800 #outside the add_stats section for code reasons
 		multiply_stats = {
 			naval_speed = -0.1
 		}

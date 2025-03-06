@@ -1730,6 +1730,9 @@ xp_cost = 0
 			build_cost_ic = 1
 			weight = 1
 		}
+		build_cost_resources = {
+			rubber = 1
+		}
 		xp_cost = 0
 		dismantle_cost_ic = 0.5
 	}
@@ -1872,6 +1875,9 @@ xp_cost = 0
 			build_cost_ic = 1.5
 			weight = 1
 		}
+		build_cost_resources = {
+			rubber = 2
+		}
 		dismantle_cost_ic = 1
 		xp_cost = 0
 	}
@@ -1985,6 +1991,9 @@ xp_cost = 0
 			air_defence = 10
 			build_cost_ic = 2
 			weight = 1
+		}
+		build_cost_resources = {
+			rubber = 2
 		}
 		dismantle_cost_ic = 1.5
 		xp_cost = 0
