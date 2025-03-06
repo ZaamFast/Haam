@@ -31,6 +31,8 @@
  TACTICS_DAMAGE_DEFENDER:0 "Defender tactic damage:"
  TACTICS_MOVEMENTSPEED_ATTACKER:0 "Tactics movement:"
  TACTICS_COMBATWIDTH:0 "Tactics combat width:"
+ TACTICS_ATTACKER_ORG_DAMAGE_MODIFIER: "Attacker organization damage modifier:"
+ TACTICS_DEFENDER_ORG_DAMAGE_MODIFIER: "Defender organization damage modifier:"
  TACTICS_VALUE_POSITIVE:0 "$VALUE|G=%0$"
  TACTICS_VALUE_NEGATIVE:0 "$VALUE|R=%0$"
  TACTICS_WIDTH_VALUE:0 "$VALUE|=%0Y$"

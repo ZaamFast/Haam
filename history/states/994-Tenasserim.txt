@@ -1,6 +1,6 @@
 state = {
 	id = 994
-	name = "Tenasserim"
+	name = "STATE_994"
 	
 	state_category = rural
 	manpower = 136693

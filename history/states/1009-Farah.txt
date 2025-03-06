@@ -1,6 +1,6 @@
 state={
 	id=1009
-	name="Farah"
+	name="STATE_1009"
 	state_category = rural
 	provinces={
 		2017 2062 2078 1948 2101

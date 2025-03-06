@@ -1,6 +1,6 @@
 state={
 	id=982
-	name="Madras States"
+	name="STATE_982"
 	resources={
 		rubber=2
 	}

@@ -1,6 +1,6 @@
 state = {
 	id = 1015
-	name = "Interior Oman"
+	name = "STATE_1015"
 	manpower = 129000
 	
 	state_category = pastoral

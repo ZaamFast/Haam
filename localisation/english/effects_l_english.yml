@@ -466,3 +466,5 @@
  EFFECT_TEMPORARY_REPAIR_SPEED_MODIFIER: "The $BUILDING|H$ get $FACTOR|+%0$ repair speed until fully repaired."
  EFFECT_ADD_DESIGN_TEMPLATE_BONUS: "Gain $DISCOUNT|2%Y$ discount for $USES|Y$ design template(s). Can be used for: $NAME|Y$"
  ADD_DESIGN_TEMPLATE_BONUS_DESC: "Has $DISCOUNT|2%Y$ discount on this design"
+
+ unlock_general_tt: "Becomes available as a General"

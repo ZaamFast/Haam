@@ -747,8 +747,8 @@
  idea_PAR_very_high_military_spending: "Very High Military Spending"
  idea_PAR_very_high_military_spending_desc: "45% of our GDP is currently reserved for the military and its adjacent branches."
 
- will_be_upgraded_to: "Will be upgraded to "
- when_expired: "when expired."
+ will_be_upgraded_to: "§YWill be upgraded to§! "
+ when_expired: "§Ywhen expired.§!"
  idea_PAR_devastation: "Devastation"
  idea_PAR_recovering: "Recovering Economy"
  idea_PAR_flourishing: "Flourishing Economy"

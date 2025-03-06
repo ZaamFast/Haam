@@ -1,7 +1,7 @@
 
 state={
 	id=987
-	name="Waziristan" #
+	name="STATE_987" #
 	manpower = 217974 
 	
 	state_category = rural

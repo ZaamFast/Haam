@@ -1,7 +1,7 @@
 
 state={
 	id=985
-	name="Sikkim" #
+	name="STATE_985" #
 	manpower = 109808 
 	
 	state_category = rural

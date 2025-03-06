@@ -1,6 +1,6 @@
 state={
 	id=1005
-	name="Qataghan"
+	name="STATE_1005"
 	manpower = 925226
 	state_category = rural
 	provinces={

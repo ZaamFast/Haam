@@ -1,6 +1,6 @@
 state={
 	id=991
-	name="Gwalior"
+	name="STATE_991"
 	provinces={
 		1949 2036 10807 
 	}

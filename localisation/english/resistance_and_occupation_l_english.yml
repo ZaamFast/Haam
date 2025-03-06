@@ -166,6 +166,8 @@
  sabotage_radar_station:0 "Sabotage Radar Station"
  sabotage_rocket_site:0 "Sabotage Rocket Site"
  sabotage_nuclear_reactor:0 "Sabotage Nuclear Reactor"
+ sabotage_nuclear_reactor_heavy_water:0 "Sabotage Nuclear Reactor"
+ sabotage_commercial_nuclear_reactor:0 "Sabotage Commercial Nuclear Reactor"
  sabotage_oil:0 "Sabotage Oil Resources"
  sabotage_aluminium:0 "Sabotage Aluminium Resources"
  sabotage_rubber:0 "Sabotage Rubber Resources"
@@ -215,4 +217,6 @@
  #OCCUPATION_STATE_OCCUPATION_INFO_NO_RESISTANCE:0 "There is no resistance in the state"
  non_core_controller:0 "Non-Core Controller"
  non_core_controller_desc:0 "A State that is controlled by a non-core country"
- 
+
+ independent_rule: "Independent Rule"
+ princely_subjugation: "Princely Subjugation"

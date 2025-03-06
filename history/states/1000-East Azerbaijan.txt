@@ -1,7 +1,7 @@
 
 state={
 	id=1000
-	name="East Azerbaijan"
+	name="STATE_1000"
 	manpower = 715857
 	resources = {
 		steel = 6

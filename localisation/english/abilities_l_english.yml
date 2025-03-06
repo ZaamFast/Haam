@@ -45,4 +45,6 @@
  ABILITY_ON_ADD:0 "On Execute:"
  ABILITY_ON_HOURLY:0 "On Each Hour:"
  ABILITY_ON_DAILY:0 "On Each Day:"
+ ABILITY_QUININE: "Distribute Quinine"
+ ABILITY_QUININE_DESC: "Quinine and extra supplies are acquired for the troops."
  

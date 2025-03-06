@@ -1,7 +1,7 @@
 
 state={
 	id=983
-	name="Deccan States" #
+	name="STATE_983" #
 	manpower = 1697161 
 	
 	state_category = rural

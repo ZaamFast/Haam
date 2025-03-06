@@ -1,7 +1,7 @@
 
 state={
 	id=986
-	name="East Punjab" #
+	name="STATE_986" #
 	manpower = 16959758 
 	
 	state_category = town

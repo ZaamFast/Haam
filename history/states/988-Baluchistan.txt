@@ -1,6 +1,6 @@
 state={
 	id=988
-	name="Baluchistan"
+	name="STATE_988"
 	provinces={
 		5075 5105 8013 8044  
 	}
