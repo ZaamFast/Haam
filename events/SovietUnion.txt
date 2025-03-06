@@ -438,7 +438,7 @@ country_event = {
 	}
 }
 
-# Tannu Tuva declines the offer
+# Monglia declines the offer
 country_event = {
 	id = soviet.15
 	title = soviet.15.t
@@ -452,7 +452,7 @@ country_event = {
 	}
 }
 
-# Tannu Tuva accepts the offer
+# Mongolia accepts the offer
 country_event = {
 	id = soviet.16
 	title = soviet.16.t
@@ -463,7 +463,7 @@ country_event = {
 	
 	option = {
 		name = soviet.16.a
-		annex_country = { target = TAN }
+		annex_country = { target = MON }
 		hidden_effect = {
 			SOV = {
 				country_event = { days = 1 id = news.14 }

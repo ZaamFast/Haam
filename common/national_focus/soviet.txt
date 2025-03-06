@@ -326,12 +326,6 @@ focus_tree = {
 		relative_position_id = SOV_infrastructure_effort_nsb
 		cost = 10
 
-		available = {
-			custom_trigger_tooltip = {
-				tooltip = SOV_fyp_controlled_factories_tier_1_tt
-				NOT = { num_of_controlled_factories < SOV_fyp_factory_requirement_tier_1 }
-			}
-		}
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
@@ -397,7 +391,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = SOV_finish_the_five_year_plan
-		cost = 10
+		cost = 0
 
 		ai_will_do = {
 			factor = 1
@@ -1388,7 +1382,7 @@ focus_tree = {
 		x = 2
 		y = 0
 		relative_position_id = SOV_national_specialists
-		cost = 5
+		cost = 10
 
 		mutually_exclusive = { focus = SOV_national_specialists }
 
@@ -7215,7 +7209,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = SOV_the_zinovyevite_terrorist_center
-		cost = 10
+		cost = 5
 
 		available = {
 
@@ -12093,7 +12087,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = SOV_annex_tannu_tuva
+		id = SOV_annex_mongolia
 		icon = GFX_SOV_annex_tannu_tuva_ccp_2d_sov_compatibility
 		prerequisite = { focus = SOV_war_measures_in_the_east }
 		x = -1
@@ -12111,7 +12105,7 @@ focus_tree = {
 		
 		available = { 
 			is_subject = no 
-			TAN = {
+			MON = {
 				OR = {
 					is_in_faction_with = ROOT
 					is_subject_of = ROOT
@@ -12122,7 +12116,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 
 		completion_reward = {
-			TAN = {	
+			MON = {	
 				country_event = { 
 					id = soviet.14 
 					hours = 6
@@ -15888,7 +15882,7 @@ ai_will_do = {
 		x = -1
 		y = 1
 		relative_position_id = SOV_embrace_the_black_hundreds
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -15956,7 +15950,7 @@ ai_will_do = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_embrace_the_black_hundreds
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -16942,7 +16936,7 @@ ai_will_do = {
 		x = -5
 		y = 1
 		relative_position_id = SOV_reconvene_the_zemsky_sobor
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -16978,17 +16972,7 @@ ai_will_do = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
-			if = {
-				limit = {
-					195 = {
-						is_capital = no
-					}
-				}
-				set_capital = {
-					state = 195
-				}
-			}
-			195 = {
+			219 = {
 				if = {
 					limit = {
 						free_building_slots = {
@@ -17125,7 +17109,7 @@ ai_will_do = {
 		x = -5
 		y = 1
 		relative_position_id = SOV_romanov_reconstruction
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -17243,7 +17227,7 @@ ai_will_do = {
 		x = 0
 		y = 2
 		relative_position_id = SOV_church_candidates
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -17646,7 +17630,7 @@ ai_will_do = {
 		x = -4
 		y = 1
 		relative_position_id = SOV_westward_bound
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -17787,7 +17771,7 @@ ai_will_do = {
 		x = -2
 		y = 1
 		relative_position_id = SOV_westward_bound
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
